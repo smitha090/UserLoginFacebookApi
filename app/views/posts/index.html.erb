@@ -1,0 +1,17 @@
+<br/>
+<%= link_to "Create New Post", new_group_post_path(@group.id) %>
+<h1>Listing posts</h1>
+<% if @group.posts.present?%>
+  <%@group.posts.each do |post| %>
+    <p>
+      <h3>Title: </h3>
+      <%= post.title %>
+      <h3>Description: </h3>
+      <%= post.text %>
+    </p>
+    <hr>
+  <% end %>  
+<% else %>
+  <p> No Posts Yet </p>  
+<% end %>
+
